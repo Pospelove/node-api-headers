@@ -14,7 +14,6 @@ const { runClang } = require('./clang-utils');
 async function getLatestReleaseVersion() {
     const response = await fetch('https://nodejs.org/download/release/index.json');
     const json = await response.json();
-    return "v19.3.0";
     return json[0].version;
 }
 
