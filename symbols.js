@@ -215,6 +215,34 @@ const v8 = {
     ]
 }
 
+const v9 = {
+    js_native_api_symbols: [
+        ...v8.js_native_api_symbols,
+        'node_api_create_syntax_error',
+        'node_api_symbol_for',
+        'node_api_throw_syntax_error'
+    ],
+    node_api_symbols: [
+        ...v8.node_api_symbols,
+        'node_api_get_module_file_name'
+    ]
+}
+
+const v10 = {
+    js_native_api_symbols: [
+        ...v9.js_native_api_symbols,
+        'node_api_create_external_string_latin1',
+        'node_api_create_external_string_utf16',
+        'node_api_create_property_key_latin1',
+        'node_api_create_property_key_utf16',
+        'node_api_create_property_key_utf8'
+    ],
+    node_api_symbols: [
+        ...v9.node_api_symbols,
+        'node_api_create_buffer_from_arraybuffer'
+    ]
+}
+
 module.exports = {
     v1,
     v2,
@@ -223,5 +251,7 @@ module.exports = {
     v5,
     v6,
     v7,
-    v8
+    v8,
+    v9,
+    v10
 }
